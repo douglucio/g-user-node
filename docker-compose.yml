@@ -5,10 +5,11 @@ services:
   node:
     build:
       context: node
-    command: "npm run start"
+    command: "node index.js"
     working_dir: /home/node/app
     environment:
       - NODE_ENV=production
+    container_name: app_node
     expose:
       - "3000"
     ports:
