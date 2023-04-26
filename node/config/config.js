@@ -2,9 +2,9 @@ require('dotenv').config()
 module.exports = {
     secret: process.env.JWT_SECRET,
     database: {
-        host: "db_mysql",
-        user: "root",
-        password: "root",
-        database: "db_teste"
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DATABASE
     }
 };
